@@ -1,0 +1,62 @@
+<!-- This example is following frontend and backend separation.
+
+    This .html performs two steps:
+    1. Create a html template skeleton, with all the elements defined (some left empty) and named with ids.
+    2. Load index.js to populate the data into empty elements.
+    -->
+
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	
+    <title>Check out Page</title>
+    
+</head>
+<body>
+
+
+<h1>Check Out Page</h1>
+
+<!-- Id "star_table" is useful for jQuery to find the html element with id, class here is mapping to Bootstrap defined class CSS -->
+
+<form id="checkout_form" method="post" action="#">
+    <label><b>Credit Card Number</b></label>
+    <input id = "cnumber" type="text" placeholder="Enter Credit Card Number" name="Cnumber">
+    <br>
+    <label><b>First Name</b></label>
+    <input id = "fname" type="text" placeholder="Enter First Name" name="Fname">
+    <br>
+    <label><b>Last Name</b></label>
+    <input id = "lname" type="text" placeholder="Enter Last Name" name="Lname">
+    <br>
+    <label><b>Expiration Date</b></label>
+    <label><b>(yyyy-mm-dd)</b></label>
+    <input id = "edate" type="text" placeholder="Enter Expiration Date" name="Edate">
+    <br>
+    <input type="submit" value="Confirm">
+</form>
+
+<div id="checkout_error_message"></div>
+
+<!-- Load jQuery and Bootstrap JS -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+<!-- Load our own JS file -->
+<!-- The path is relative to index.html, since these two files are in the same directory -->
+<!-- Note the url does not contain a "/" in the beginning, which means the url is relative to current path
+     otherwise the url is relative to the root path-->
+<script src="checkout.js"></script>
+</body>
+
+
+</html>
